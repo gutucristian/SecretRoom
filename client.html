@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SecretRoom</title>    
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" id="navbar-brand">SecretRoom</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="chatTopics"></ul>             
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <textarea rows="15" cols="50" class="form-control" disabled="disabled" id="chatMsgs"></textarea>
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="input-group" style="padding-top:8px">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" id="sendBtn">Send</button>           
+                        <button class="btn btn-primary" type="button" id="stats">Stats</button>             
+                    </span>
+                    <input type="text" class="form-control" placeholder="type your message..." id="msgBox">                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">                    
+                    <h4 class="modal-title" id="myModalLabel" style="color:red">Mobile not supported!</h4>
+                </div>
+                <div class="modal-body">
+                    <b>We are working to fix this soon!</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--scripts-->    
+    <script src="libs/jquery/jquery.js"></script>
+    <!--<script src="libs/socket.io/socket.io-1.2.0.js"></script>-->    
+    <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <script src="clientUI.min.js"></script>
+</body>
+</html>
